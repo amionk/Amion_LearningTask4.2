@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ResRate</string>
+    <string name="mtitle">Respiratory Rate Assessment</string>
+    <string name="instruct"> Count how many times your chest or abdomen rises over the course of 1 minute (60 seconds). </string>
+    <string name="input1_inst">Enter your recorded count</string>
+    <string name="input2_inst">Enter your age</string>
+    <string name="age_inst">Enter the number [ 0 ] if the one being assessed is less than 1 year old.</string>
+    <string name="buttonc"> Compute </string>
+    <string name="buttonr"> Return</string>
+
+    <string name="header_infant">Infant Respiratory Rate Assessment</string>
+    <string name="header_older">Older Children Respiratory Rate Assessment</string>
+    <string name="header_preschool">Pre-school Children Respiratory Rate Assessment</string>
+    <string name="header_adult">Adult Respiratory Rate Assessment</string>
+</resources>
