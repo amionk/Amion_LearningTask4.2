@@ -25,8 +25,8 @@ public class InfantResult extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(InfantResult.this, MainActivity.class);
-        startActivity(intent);
+        Intent infant = new Intent(InfantResult.this, MainActivity.class);
+        startActivity(infant);
     }
 }
 

@@ -49,7 +49,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else if(userAge > 6 && userAge <= 18){
             ageGroup = 3;
 
-        } else if(userAge > 18 && userAge <= 59){
+        } else if(userAge > 18 && userAge <= 100){
+            ageGroup = 4;
+
+        } else if(userAge > 18 && userAge <= 100){
             ageGroup = 4;
 
         }
@@ -58,58 +61,63 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (ageGroup) {
             case 1:
-                header = "Infant Respiratory Rate Assessment";
                 if(userCount >= 20 && userCount <= 40){
-                    resultMessage = "Normal Respiratory Rate";
+                    result = String.valueOf(userCount);
+                    resultMessage = "Your Respiratory Rate is "+result+ " which is a Normal Respiratory Rate";
                 }else{
-                    resultMessage = "Abnormal Respiratory Rate";
+                    result = String.valueOf(userCount);
+                    resultMessage = "Your Respiratory Rate is "+result+ " which is an Abnormal Respiratory Rate";
                 }
                 Bundle args1 = new Bundle();
-                args1.putString(header,resultMessage);
+                args1.putString("result",resultMessage);
                 Intent infant = new Intent(MainActivity.this, InfantResult.class);
                 infant.putExtras(args1);
                 startActivity(infant);
                 break;
 
             case 2:
-                header = "Pre-school Children Respiratory Rate Assessment";
                 if(userCount >= 20 && userCount <= 30){
-                    resultMessage = "Normal Respiratory Rate";
+                    result = String.valueOf(userCount);
+                    resultMessage ="Your Respiratory Rate is "+result+ " which is a Normal Respiratory Rate";
                 }else{
-                    resultMessage = "Abnormal Respiratory Rate";
+                    result = String.valueOf(userCount);
+                    resultMessage = "Your Respiratory Rate is "+result+ " which is an Abnormal Respiratory Rate";
                 }
                 Bundle args2 = new Bundle();
-                args2.putString(header,resultMessage);
+                args2.putString("result",resultMessage);
 
                 Intent preschool = new Intent(MainActivity.this, PreschoolResult.class);
                 preschool.putExtras(args2);
                 startActivity(preschool);
                 break;
             case 3:
-                header= "Older Children Respiratory Rate Assessment";
+
                 if(userCount >= 16 && userCount <= 25){
-                    resultMessage = "Normal Respiratory Rate";
+                    result = String.valueOf(userCount);
+                    resultMessage = "Your Respiratory Rate is "+result+ " which is a Normal Respiratory Rate";
                 }else{
-                    resultMessage = "Abnormal Respiratory Rate";
+                    result = String.valueOf(userCount);
+                    resultMessage = "Your Respiratory Rate is "+result+ " which is an Abnormal Respiratory Rate";
                 }
 
                 Bundle args3 = new Bundle();
-                args3.putString(header,resultMessage);
+                args3.putString("result",resultMessage);
 
                 Intent older = new Intent(MainActivity.this, OlderChildResult.class);
                 older.putExtras(args3);
                 startActivity(older);
                 break;
             case 4:
-                header = "Adult Respiratory Rate Assessment";
                 if(userCount >= 12 && userCount <= 20){
-                    resultMessage = "Normal Respiratory Rate";
+                    result = String.valueOf(userCount);
+                    resultMessage = "Your Respiratory Rate is "+result+ " which is a Normal Respiratory Rate";
                 }else{
-                    resultMessage = "Abnormal Respiratory Rate";
+                    result = String.valueOf(userCount);
+                    resultMessage = "Your Respiratory Rate is "+result+ " which is an Abnormal Respiratory Rate";
                 }
 
                 Bundle args4 = new Bundle();
-                args4.putString(header,resultMessage);
+                args4.putString("result",resultMessage);
 
                 Intent adult = new Intent(MainActivity.this, AdultResult.class);
                 adult.putExtras(args4);
